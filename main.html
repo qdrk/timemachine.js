@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Pragma" CONTENT="no-cache">
+<meta http-equiv="Expires" CONTENT="-1">
+<link rel="stylesheet" type="text/css" href="main.css" />
+<title>Layer.js</title>
+</head>
+<body>
+    <div id="time-wrapper" style="height: 100%; width: 100%;">    
+        <div class="time-inner" style="height: 100%; width: 100%;">
+        </div>
+        <div class="nav-arrows">
+            <div class="btn back" id="back"></div>
+            <div class="btn next" id="next"></div>
+        </div>
+    </div>
+    
+     <div class="panel-content">
+        <div class="panel-header">Triple A</div>
+        <div class="page1">
+        </div>
+    </div>
+     <div class="panel-content">
+        <div class="panel-header">iScan</div>
+        <div class="page1">
+        </div>
+    </div>
+     <div class="panel-content">
+        <div class="panel-header">iScan</div>
+        <div class="page1">
+        </div>
+    </div>
+     <div class="panel-content">
+        <div class="panel-header">iScan</div>
+        <div class="page1">
+        </div>
+    </div>
+     <div class="panel-content">
+        <div class="panel-header">iScan</div>
+        <div class="page1">
+        </div>
+    </div>
+     <div class="panel-content">
+        <div class="panel-header">iScan</div>
+        <div class="page1">
+        </div>
+    </div>
+     <div class="panel-content">
+        <div class="panel-header">iScan</div>
+        <div class="page1">
+        </div>
+    </div>
+    
+	<script src="jquery-1.7.1.js"></script>
+	<script src="time.js"></script>	
+	<script>
+		$(document).ready(function() {		    
+		    var msgs = $('.panel-content');
+		    var slidePanel = new SlidePanel({
+		        id: 'time',
+		        msgs: msgs,
+		        atta_elem: $('#time-wrapper'),
+		        pane_render: function (msg){ return $(msg).html(); }
+		    });
+		    msgs.remove();
+		    //slidePanel.start();
+		});
+	</script>
+</body>
+</html>
