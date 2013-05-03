@@ -14,7 +14,8 @@ var SlidePanel = function (args) {
         for (var i = 0; i < PANEL_COUNT; ++i) {
             // the first one got the highest z-index
             var z_idx = (PANEL_COUNT - i) * 10;
-            html += '<div id="panel' + i + '" class="panel" style="z-index: ' + z_idx + ';">' + pane_render(msgs[i]) + '</div>';
+            html += '<div id="panel' + i + '" class="panel" style="z-index: ' + z_idx + ';">' 
+                + pane_render(msgs[i]) + '</div>';
         }
         return html;
     }
@@ -134,11 +135,6 @@ var SlidePanel = function (args) {
             console.log('next');
             slider.next();
         });
-
-        $(window).click(function (evt) {
-
-        });
-
     }
 
     this.hook_action();
